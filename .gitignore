@@ -7,4 +7,9 @@ coverage/
 *.sqlite
 *.log
 .DS_Store
-.npmrc  
+.npmrc
+/Plugins/
+index.js
+index.js.map
+index.d.ts
+package-lock.json

@@ -3,8 +3,17 @@
   "version": "0.0.1",
   "description": "The core Pomegranate plugins for RestMatic",
   "main": "index.js",
+  "files": [
+    "index.d.ts",
+    "index.js.map",
+    "Plugins/**/*",
+    "Readme.md",
+    "LICENCE"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "tsc",
+    "test": "jest",
+    "docs": "typedoc --mode file --theme minimal --target ES6 --out docs src"
   },
   "repository": {
     "type": "git",
@@ -20,5 +29,16 @@
   "bugs": {
     "url": "https://github.com/restmatic/server/issues"
   },
-  "homepage": "https://github.com/restmatic/server#readme"
+  "homepage": "https://github.com/restmatic/server#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/lodash": "^4.14.123",
+    "jest": "^24.5.0",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {
+    "@pomegranate/plugin-tools": "^0.0.9",
+    "express": "^4.16.4"
+  }
 }
