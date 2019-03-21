@@ -1,6 +1,6 @@
 {
   "name": "@restmatic/server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The core Pomegranate plugins for RestMatic",
   "main": "index.js",
   "files": [
