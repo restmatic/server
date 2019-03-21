@@ -1,0 +1,24 @@
+{
+  "name": "@restmatic/server",
+  "version": "0.0.0",
+  "description": "The core Pomegranate plugins for RestMatic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/restmatic/server.git"
+  },
+  "keywords": [
+    "Pomegranate",
+    "Web Framework",
+    "Express"
+  ],
+  "author": "Jim Bulkowski <jim.b@paperelectron.com> (http://paperelectron.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/restmatic/server/issues"
+  },
+  "homepage": "https://github.com/restmatic/server#readme"
+}
