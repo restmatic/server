@@ -5,25 +5,27 @@
  * @license MIT {@link http://opensource.org/licenses/MIT}
  */
 
-import {EffectPlugin} from "@pomegranate/plugin-tools";
+import {CreatePlugin} from "@pomegranate/plugin-tools";
 
-export const ExpressServerPlugin = EffectPlugin()
+export const ExpressServerPlugin = CreatePlugin('action')
 .variables({
   port: 8080,
   address: 'localhost'
 })
 .configuration({
   name: 'ExpressServer',
-  type: 'action'
+  depends: ['@restmatic/PostRouter']
 })
 .hooks({
   load: () => {
 
   },
-  start: () => {
-
+  start: (Express, PluginVariables,PluginStore, PluginLogger) => {
+    PluginStore.server = Express.listen(PluginVariables.port, () => {
+      PluginLogger.log(`Started RestMatic server on port ${PluginVariables.port}`)
+    })
   },
-  stop: () => {
-
+  stop: (PluginStore) => {
+    PluginStore.server.close()
   }
 })
