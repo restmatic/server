@@ -10,7 +10,7 @@ import {ExpressCorePlugin} from "./Plugins/ExpressCore";
 import {ExpressServerPlugin} from "./Plugins/ExpressServer";
 import {StaticFilesPlugin} from "./Plugins/StaticFilesPlugin";
 import {BundledMiddleware} from "./Plugins/BundledMiddleware";
-import {ProjectMiddleware} from "./Plugins/ProjectMiddleware";
+import {Middleware} from "./Plugins/Middleware";
 import {ExpressConfiguration} from "./Plugins/ExpressConfiguration";
 import {PreRouter} from "./Plugins/PreRouter";
 import {RouterPlugin} from "./Plugins/Router";
@@ -22,7 +22,7 @@ export const Plugin = CreatePlugin('application')
     ExpressCorePlugin,
     ExpressConfiguration,
     BundledMiddleware,
-    ProjectMiddleware,
+    Middleware,
     StaticFilesPlugin,
     PreRouter,
     RouterPlugin,

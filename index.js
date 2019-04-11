@@ -11,7 +11,7 @@ const ExpressCore_1 = require("./Plugins/ExpressCore");
 const ExpressServer_1 = require("./Plugins/ExpressServer");
 const StaticFilesPlugin_1 = require("./Plugins/StaticFilesPlugin");
 const BundledMiddleware_1 = require("./Plugins/BundledMiddleware");
-const ProjectMiddleware_1 = require("./Plugins/ProjectMiddleware");
+const Middleware_1 = require("./Plugins/Middleware");
 const ExpressConfiguration_1 = require("./Plugins/ExpressConfiguration");
 const PreRouter_1 = require("./Plugins/PreRouter");
 const Router_1 = require("./Plugins/Router");
@@ -22,7 +22,7 @@ exports.Plugin = plugin_tools_1.CreatePlugin('application')
     ExpressCore_1.ExpressCorePlugin,
     ExpressConfiguration_1.ExpressConfiguration,
     BundledMiddleware_1.BundledMiddleware,
-    ProjectMiddleware_1.ProjectMiddleware,
+    Middleware_1.Middleware,
     StaticFilesPlugin_1.StaticFilesPlugin,
     PreRouter_1.PreRouter,
     Router_1.RouterPlugin,

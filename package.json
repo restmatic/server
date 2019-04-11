@@ -40,7 +40,7 @@
     "typescript": "^3.3.4000"
   },
   "dependencies": {
-    "@pomegranate/plugin-tools": "^1.0.0",
+    "@pomegranate/plugin-tools": "^1.2.2",
     "compression": "^1.7.4",
     "express": "^4.16.4",
     "lodash": "^4.17.11",

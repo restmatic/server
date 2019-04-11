@@ -15,13 +15,13 @@ export const PreRouter = CreatePlugin('action')
     depends: ['@restmatic/StaticFiles']
   })
   .variables({
-    middlewareOrder: ['compress', 'serveStatic', 'responseTime', 'logger']
+    middlewareOrder: ['compression', 'serveStatic', 'responseTime', 'logger']
   })
   .hooks({
     load: (PluginInjector, PluginLogger, PluginVariables, Middleware, Express) => {
       PluginLogger.log('Configuring Pre-route Middleware', 1)
       let MountMiddleware = extractMiddleware(Middleware)
-
+      console.log(Middleware)
       each((mw:{fn: any, name: string}) => {
         PluginLogger.log(`Adding pre-route middleware: ${mw.name}.`)
         Express.use(mw.fn)

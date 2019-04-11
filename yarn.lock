@@ -276,10 +276,10 @@
     "@types/istanbul-lib-coverage" "^1.1.0"
     "@types/yargs" "^12.0.9"
 
-"@pomegranate/plugin-tools@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@pomegranate/plugin-tools/-/plugin-tools-1.0.0.tgz#ad9c5027ee6a986a9b3d4e54eb1bf849684cf0c7"
-  integrity sha512-lTf1UBB9RbizNKLpvPyBDEnjq6715+5neip0GqFtRlNQ7Ha3nLv2jUYayC8mojOkahFQSfviHQFQ+i8zAwn8Tg==
+"@pomegranate/plugin-tools@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@pomegranate/plugin-tools/-/plugin-tools-1.2.2.tgz#4d84adcf50acdbae89572c99137c5c3315c70533"
+  integrity sha512-9jz6Q02tCjMq/2Dxd8doaOzVJGUup9xq67R82FvQykEEoB0+GiRKSX6DoXTO17C3/duneU4a9q4L1zFEifs1yA==
   dependencies:
     bluebird "^3.5.3"
     fs-extra "^7.0.1"

@@ -42,6 +42,7 @@ export const BundledMiddleware = CreatePlugin('merge')
   })
   .hooks({
     load: function(Injector, PluginVariables, PluginLogger) {
+
       return {
         404: fourOhfour,
         500: fivehundred,

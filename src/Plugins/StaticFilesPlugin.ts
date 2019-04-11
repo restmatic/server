@@ -6,19 +6,21 @@
  */
 
 import {CreatePlugin} from "@pomegranate/plugin-tools";
+import serveStatic from 'serve-static'
 
 export const StaticFilesPlugin = CreatePlugin('merge')
   .configuration({
     name: 'StaticFiles',
     injectableParam: 'Middleware',
-    depends: ['@restmatic/ProjectMiddleware']
+    injectableScope: 'namespace',
+    depends: ['@restmatic/Middleware']
   })
   .variables({
     serve: true
   })
   .directories([{prop: 'main', path: '.'}])
   .hooks({
-    load: function(Injector, PluginVariables) {
-      return {ok: true}
+    load: function(Injector, PluginVariables, PluginFiles) {
+      return {serveStatic: serveStatic(PluginFiles('main').workingDirectory)}
     }
   })
