@@ -62,9 +62,9 @@ export const Middleware = CreatePlugin('merge')
           aliases: 'g',
           describe: `Generates Middleware file <name>`,
           builder: (yargs) => {
-            yargs
+            return yargs
               .positional('name', {
-                describe: 'The the filename to be created at path.',
+                describe: 'The the filename to be created.',
                 default: 'index',
                 type: 'string'
               })
