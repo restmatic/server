@@ -6,6 +6,7 @@
  */
 import {CreatePlugin} from "@pomegranate/plugin-tools";
 import {parse} from 'url'
+import bodyParser from 'body-parser'
 import morgan from 'morgan'
 import compression from 'compression'
 import responseTime from 'response-time'
@@ -42,10 +43,12 @@ export const BundledMiddleware = CreatePlugin('merge')
   })
   .hooks({
     load: function(Injector, PluginVariables, PluginLogger) {
-
+      console.log(bodyParser)
       return {
         404: fourOhfour,
         500: fivehundred,
+        jsonBody: bodyParser.json(),
+        urlBody: bodyParser.urlencoded({extended: true}),
         compression: compression(),
         responseTime: responseTime(),
         //@ts-ignore
