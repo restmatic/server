@@ -17,7 +17,7 @@ import {RouterPlugin} from "./Plugins/Router";
 import {PostRouter} from "./Plugins/PostRouter";
 
 export const Plugin = CreatePlugin('application')
-  .configuration({name: 'server'})
+  .configuration({name: 'Server'})
   .applicationPlugins([
     ExpressCorePlugin,
     ExpressConfiguration,
