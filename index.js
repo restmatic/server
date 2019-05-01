@@ -17,7 +17,7 @@ const PreRouter_1 = require("./Plugins/PreRouter");
 const Router_1 = require("./Plugins/Router");
 const PostRouter_1 = require("./Plugins/PostRouter");
 exports.Plugin = plugin_tools_1.CreatePlugin('application')
-    .configuration({ name: 'server' })
+    .configuration({ name: 'Server' })
     .applicationPlugins([
     ExpressCore_1.ExpressCorePlugin,
     ExpressConfiguration_1.ExpressConfiguration,
