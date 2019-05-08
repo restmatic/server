@@ -15,12 +15,16 @@ import {ExpressConfiguration} from "./Plugins/ExpressConfiguration";
 import {PreRouter} from "./Plugins/PreRouter";
 import {RouterPlugin} from "./Plugins/Router";
 import {PostRouter} from "./Plugins/PostRouter";
+import {CaptureErrorPlugin} from "./Plugins/CaptureError";
+import {RouteSecurity} from "./Plugins/RouteSecurity";
 
 export const Plugin = CreatePlugin('application')
   .configuration({name: 'Server'})
   .applicationPlugins([
+    RouteSecurity,
     ExpressCorePlugin,
     ExpressConfiguration,
+    CaptureErrorPlugin,
     BundledMiddleware,
     Middleware,
     StaticFilesPlugin,

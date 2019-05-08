@@ -16,11 +16,15 @@ const ExpressConfiguration_1 = require("./Plugins/ExpressConfiguration");
 const PreRouter_1 = require("./Plugins/PreRouter");
 const Router_1 = require("./Plugins/Router");
 const PostRouter_1 = require("./Plugins/PostRouter");
+const CaptureError_1 = require("./Plugins/CaptureError");
+const RouteSecurity_1 = require("./Plugins/RouteSecurity");
 exports.Plugin = plugin_tools_1.CreatePlugin('application')
     .configuration({ name: 'Server' })
     .applicationPlugins([
+    RouteSecurity_1.RouteSecurity,
     ExpressCore_1.ExpressCorePlugin,
     ExpressConfiguration_1.ExpressConfiguration,
+    CaptureError_1.CaptureErrorPlugin,
     BundledMiddleware_1.BundledMiddleware,
     Middleware_1.Middleware,
     StaticFilesPlugin_1.StaticFilesPlugin,
