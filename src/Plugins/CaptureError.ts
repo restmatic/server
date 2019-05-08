@@ -48,7 +48,6 @@ export const CaptureErrorPlugin = CreatePlugin('anything')
                 return {message: v.message, type: v.type}
               })
             }
-            console.log(err.errors)
             return res.status(errorStatus).json(response)
           }
         }
