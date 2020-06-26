@@ -13,7 +13,6 @@ export const CaptureErrorPlugin = CreatePlugin('anything')
   .configuration({
     name: 'CaptureError',
     injectableParam: 'CaptureError',
-    injectableScope: 'application',
     provides: ['@restmatic/Controllers']
   })
   .hooks({
